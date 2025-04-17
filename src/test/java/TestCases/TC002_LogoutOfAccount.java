@@ -5,6 +5,7 @@ import java.time.Duration;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -27,22 +28,18 @@ public class TC002_LogoutOfAccount extends BaseTest{
 		drawer.clickDrawerOption();
 		drawer.clickLogot();
 		
-		sa = new SoftAssert();
-		try {
+		
 		if(driver.getTitle().equals("Swag Labs")) {
 		
-		    sa.assertTrue(true);
-		    System.out.println("Logout Success !!!!!");
+		    Assert.assertTrue(true);
+		    System.out.println("TC002 :Pass : Logout Success");
 		}else {
 			
-			sa.assertTrue(false);
-		    System.out.println("Logout Failed ");
+			Assert.assertTrue(false);
+		    System.out.println("TC002 :Fail : Logout Failed ");
 			
 		}
-		sa.assertAll();
-		}catch(AssertionError e) {
-			System.out.println("Assertion error  : "+e.getMessage());
-		}
+		
 	}
 	     
 

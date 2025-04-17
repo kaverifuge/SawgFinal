@@ -5,6 +5,7 @@ import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -25,8 +26,7 @@ public class TC005_RemoveItem extends BaseTest{
 	
 	obackpack.clickRemoveItembtn();
 	
-	sa= new SoftAssert();
-	try {
+	
 	    if(obackpack.verifyAddItembtnPresent() == true) {
 	    	
 	    	TakesScreenshot screen1 = (TakesScreenshot)driver;
@@ -34,8 +34,8 @@ public class TC005_RemoveItem extends BaseTest{
 	    	File target1 = new File(System.getProperty("user.dir")+"//screenshots//fullpage1.png");
 	    	source1.renameTo(target1);
 	    	
-	    	sa.assertTrue(true);
-	    	System.out.println("Item Removed !!!!");
+	    	Assert.assertTrue(true);
+	    	System.out.println("TC005 : Pass : Item Removed");
 	    }else {
 	    	
 	    	TakesScreenshot screen2 = (TakesScreenshot)driver;
@@ -43,16 +43,11 @@ public class TC005_RemoveItem extends BaseTest{
 	    	File target2 = new File(System.getProperty("user.dir")+"//screenshots//removebtn.png");
 	    	source2.renameTo(target2);
 	    	
-	    	sa.assertTrue(false);
-	    	System.out.println("Item Not Removed ");
+	    	Assert.assertTrue(false);
+	    	System.out.println("TC005 : Fail : Item Not Removed ");
 	    }
 	    
-	    sa.assertAll();
-	    
-	}catch(AssertionError e) {
-		
-		System.out.println("Assertion error : " + e.getMessage());
-	}
+	   
 	
 	}
 

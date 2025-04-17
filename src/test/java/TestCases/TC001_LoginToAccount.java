@@ -2,6 +2,7 @@ package TestCases;
 
 import java.io.IOException;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -18,22 +19,15 @@ public class TC001_LoginToAccount extends BaseTest{
 		String loggedInUrl = "https://www.saucedemo.com/inventory.html";
 		String url= driver.getCurrentUrl();
 		
-		//System.out.println(url);
 		
-		sa = new SoftAssert();
-		try {
 		if(loggedInUrl.equals(url)) {
-			sa.assertTrue(true);
-			System.out.println("Login To Account Success!!!!");
+			Assert.assertTrue(true);
+			System.out.println("TC001 : Pass : Login To Account Success");
 		}else {
-			sa.assertTrue(false);
-			System.out.println("Login To Account Failed");
+			Assert.assertTrue(false);
+			System.out.println("TC001 : Fail : Login To Account Failed");
 		}
-		sa.assertAll();
-		}catch(AssertionError e) {
-			
-			System.out.println("Assertion error : "+e.getMessage());
-		}
+		
 		
 	}
 		

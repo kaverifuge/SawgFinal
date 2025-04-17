@@ -20,10 +20,9 @@ public class TC006_VerifyAppTitle extends BaseTest{
 		//try {
 			
 		if(appurl.equals("https://www.saucedemooo.com/")) {
-		// if(Assert.assertEquals(appurl, "https://www.saucedemooo.com/")) {
-			
+
 			Assert.assertTrue(true);
-			System.out.println("Title matched");
+			System.out.println("TC006 : Pass : Title matched");
 			
 		}else {
 		
@@ -32,21 +31,11 @@ public class TC006_VerifyAppTitle extends BaseTest{
 				File target = new File(System.getProperty("user.dir")+"//screenshots//fullpage.png");
 				source.renameTo(target);
 				
-				
-				//Assert.fail();
-				System.out.println("Title NOT matched");
+				System.out.println("TC006 : Fail : Title NOT matched");
 				Assert.assertTrue(false);
 				
 		}
-		  //  sa.assertAll();
-		/*}catch(AssertionError e){
-			
-			System.out.println("Assertion caught : "+e.getMessage());
-			throw e;
-			
-		}*/
-		   // System.out.println("SoftAssert>>>>>>>>>");
-		
+		 
 	}
 
 }

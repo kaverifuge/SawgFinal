@@ -3,6 +3,7 @@ package TestCases;
 import java.io.IOException;
 import java.time.Duration;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -30,7 +31,7 @@ public class TC004_VerifyCompletePurchaseSuccess extends BaseTest {
 		loginToAccount();
 		additionOfItems();
 		
-		System.out.println("Additem success");
+		//System.out.println("Additem success");
 		ap = new AllProductsDisplayPage(driver);
 		ap.clickCartButton();
 		
@@ -49,21 +50,16 @@ public class TC004_VerifyCompletePurchaseSuccess extends BaseTest {
 		chkOverview.clickFinishButton();
 		
 		chckComplete = new CheckoutCompletePage(driver);
-		sa = new SoftAssert();
-		try {
+		
 		 if(chckComplete.confirmOrderSuccesstext()== true) {
 			 
-			 sa.assertTrue(true);
-			 System.out.println("<<<<<<<<<<Purchase item Passed !!!>>>>>>>");
+			 Assert.assertTrue(true);
+			 System.out.println("TC004 :Pass : Purchase item worked ");
 		 }else {
-			 sa.assertTrue(false);
-			 System.out.println("Purchase item FAILED");
+			 Assert.assertTrue(false);
+			 System.out.println("TC004 :Pass : Purchase item not working");
 		 }
-		 sa.assertAll();
-		}catch(AssertionError e) {
-			
-			System.out.println("Assertion error "+e.getMessage());
-		}
+		
 		
 		
 	}
