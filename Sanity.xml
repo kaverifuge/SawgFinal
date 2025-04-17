@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite">
-  <test thread-count="5" name="Test">
+<suite name="Sanity" thread-count="5">
+  <test  name="TestSanityTestCases">
+  <groups>
+  <run>
+  <include name="Sanity"></include>
+  </run>
+  </groups>
     <classes>
       <class name="TestCases.TC006_VerifyAppTitle"/>
       <class name="TestCases.BaseTest"/>
@@ -12,4 +17,4 @@
       <class name="TestCases.TC005_RemoveItem"/>
     </classes>
   </test> <!-- Test -->
-</suite> <!-- Suite -->
+</suite> <!-- AllTestCases -->

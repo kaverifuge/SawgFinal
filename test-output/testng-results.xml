@@ -1,25 +1,148 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-04-16T22:50:41 EDT" name="Default suite" finished-at="2025-04-16T22:50:51 EDT" duration-ms="9323">
+  <suite started-at="2025-04-17T10:53:33 EDT" name="Suite" finished-at="2025-04-17T10:54:14 EDT" duration-ms="41418">
     <groups>
+      <group name="Sanity">
+        <method signature="TC001_LoginToAccount.loginToAccountAssertion()[pri:0, instance:TestCases.TC001_LoginToAccount@5c5eefef]" name="loginToAccountAssertion" class="TestCases.TC001_LoginToAccount"/>
+        <method signature="TC002_LogoutOfAccount.logOutOfAccount()[pri:0, instance:TestCases.TC002_LogoutOfAccount@222545dc]" name="logOutOfAccount" class="TestCases.TC002_LogoutOfAccount"/>
+        <method signature="TC004_VerifyCompletePurchaseSuccess.purchaseCompleteSucess()[pri:0, instance:TestCases.TC004_VerifyCompletePurchaseSuccess@6ae5aa72]" name="purchaseCompleteSucess" class="TestCases.TC004_VerifyCompletePurchaseSuccess"/>
+      </group> <!-- Sanity -->
+      <group name="Functionality">
+        <method signature="TC004_VerifyCompletePurchaseSuccess.purchaseCompleteSucess()[pri:0, instance:TestCases.TC004_VerifyCompletePurchaseSuccess@6ae5aa72]" name="purchaseCompleteSucess" class="TestCases.TC004_VerifyCompletePurchaseSuccess"/>
+        <method signature="TC005_RemoveItem.removeItem()[pri:0, instance:TestCases.TC005_RemoveItem@5158b42f]" name="removeItem" class="TestCases.TC005_RemoveItem"/>
+      </group> <!-- Functionality -->
+      <group name="Verification">
+        <method signature="TC003_verifyUserIsAbleToAddItemToCart.verifyAdditionOfItemsSuccess()[pri:0, instance:TestCases.TC003_verifyUserIsAbleToAddItemToCart@16293aa2]" name="verifyAdditionOfItemsSuccess" class="TestCases.TC003_verifyUserIsAbleToAddItemToCart"/>
+        <method signature="TC006_VerifyAppTitle.checkAppTitle()[pri:0, instance:TestCases.TC006_VerifyAppTitle@52bf72b5]" name="checkAppTitle" class="TestCases.TC006_VerifyAppTitle"/>
+      </group> <!-- Verification -->
     </groups>
-    <test started-at="2025-04-16T22:50:41 EDT" name="Default test" finished-at="2025-04-16T22:50:51 EDT" duration-ms="9323">
-      <class name="TestCases.TC005_RemoveItem">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC005_RemoveItem@12468a38]" started-at="2025-04-16T22:50:41 EDT" name="setUp" finished-at="2025-04-16T22:50:47 EDT" duration-ms="5353" status="PASS">
+    <test started-at="2025-04-17T10:53:33 EDT" name="Test" finished-at="2025-04-17T10:54:14 EDT" duration-ms="41418">
+      <class name="TestCases.TC006_VerifyAppTitle">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC006_VerifyAppTitle@52bf72b5]" started-at="2025-04-17T10:53:33 EDT" name="setUp" finished-at="2025-04-17T10:53:40 EDT" duration-ms="7250" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="removeItem()[pri:0, instance:TestCases.TC005_RemoveItem@12468a38]" started-at="2025-04-16T22:50:47 EDT" name="removeItem" finished-at="2025-04-16T22:50:49 EDT" duration-ms="2464" status="PASS">
+        <test-method signature="checkAppTitle()[pri:0, instance:TestCases.TC006_VerifyAppTitle@52bf72b5]" started-at="2025-04-17T10:53:40 EDT" name="checkAppTitle" finished-at="2025-04-17T10:53:40 EDT" duration-ms="146" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at TestCases.TC006_VerifyAppTitle.checkAppTitle(TC006_VerifyAppTitle.java:38)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkAppTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC006_VerifyAppTitle@52bf72b5]" started-at="2025-04-17T10:53:40 EDT" name="tearDown" finished-at="2025-04-17T10:53:41 EDT" duration-ms="520" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.TC006_VerifyAppTitle -->
+      <class name="TestCases.TC005_RemoveItem">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC005_RemoveItem@5158b42f]" started-at="2025-04-17T10:54:06 EDT" name="setUp" finished-at="2025-04-17T10:54:10 EDT" duration-ms="3817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="removeItem()[pri:0, instance:TestCases.TC005_RemoveItem@5158b42f]" started-at="2025-04-17T10:54:10 EDT" name="removeItem" finished-at="2025-04-17T10:54:13 EDT" duration-ms="2447" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- removeItem -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC005_RemoveItem@12468a38]" started-at="2025-04-16T22:50:49 EDT" name="tearDown" finished-at="2025-04-16T22:50:51 EDT" duration-ms="1456" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC005_RemoveItem@5158b42f]" started-at="2025-04-17T10:54:13 EDT" name="tearDown" finished-at="2025-04-17T10:54:14 EDT" duration-ms="1422" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestCases.TC005_RemoveItem -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="TestCases.TC003_verifyUserIsAbleToAddItemToCart">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC003_verifyUserIsAbleToAddItemToCart@16293aa2]" started-at="2025-04-17T10:54:00 EDT" name="setUp" finished-at="2025-04-17T10:54:04 EDT" duration-ms="3875" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="verifyAdditionOfItemsSuccess()[pri:0, instance:TestCases.TC003_verifyUserIsAbleToAddItemToCart@16293aa2]" started-at="2025-04-17T10:54:04 EDT" name="verifyAdditionOfItemsSuccess" finished-at="2025-04-17T10:54:05 EDT" duration-ms="914" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyAdditionOfItemsSuccess -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC003_verifyUserIsAbleToAddItemToCart@16293aa2]" started-at="2025-04-17T10:54:05 EDT" name="tearDown" finished-at="2025-04-17T10:54:06 EDT" duration-ms="1435" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.TC003_verifyUserIsAbleToAddItemToCart -->
+      <class name="TestCases.TC004_VerifyCompletePurchaseSuccess">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC004_VerifyCompletePurchaseSuccess@6ae5aa72]" started-at="2025-04-17T10:53:41 EDT" name="setUp" finished-at="2025-04-17T10:53:44 EDT" duration-ms="3939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="purchaseCompleteSucess()[pri:0, instance:TestCases.TC004_VerifyCompletePurchaseSuccess@6ae5aa72]" started-at="2025-04-17T10:53:44 EDT" name="purchaseCompleteSucess" finished-at="2025-04-17T10:53:46 EDT" duration-ms="1960" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- purchaseCompleteSucess -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC004_VerifyCompletePurchaseSuccess@6ae5aa72]" started-at="2025-04-17T10:53:46 EDT" name="tearDown" finished-at="2025-04-17T10:53:48 EDT" duration-ms="1402" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.TC004_VerifyCompletePurchaseSuccess -->
+      <class name="TestCases.TC001_LoginToAccount">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC001_LoginToAccount@5c5eefef]" started-at="2025-04-17T10:53:54 EDT" name="setUp" finished-at="2025-04-17T10:53:58 EDT" duration-ms="3822" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="loginToAccountAssertion()[pri:0, instance:TestCases.TC001_LoginToAccount@5c5eefef]" started-at="2025-04-17T10:53:58 EDT" name="loginToAccountAssertion" finished-at="2025-04-17T10:53:59 EDT" duration-ms="697" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToAccountAssertion -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC001_LoginToAccount@5c5eefef]" started-at="2025-04-17T10:53:59 EDT" name="tearDown" finished-at="2025-04-17T10:54:00 EDT" duration-ms="1328" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.TC001_LoginToAccount -->
+      <class name="TestCases.TC002_LogoutOfAccount">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:TestCases.TC002_LogoutOfAccount@222545dc]" started-at="2025-04-17T10:53:48 EDT" name="setUp" finished-at="2025-04-17T10:53:52 EDT" duration-ms="3831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="logOutOfAccount()[pri:0, instance:TestCases.TC002_LogoutOfAccount@222545dc]" started-at="2025-04-17T10:53:52 EDT" name="logOutOfAccount" finished-at="2025-04-17T10:53:53 EDT" duration-ms="1111" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logOutOfAccount -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestCases.TC002_LogoutOfAccount@222545dc]" started-at="2025-04-17T10:53:53 EDT" name="tearDown" finished-at="2025-04-17T10:53:54 EDT" duration-ms="1405" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestCases.TC002_LogoutOfAccount -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

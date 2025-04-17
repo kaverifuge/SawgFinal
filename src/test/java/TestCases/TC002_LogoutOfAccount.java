@@ -15,7 +15,7 @@ public class TC002_LogoutOfAccount extends BaseTest{
 	
 	public DrawerOption drawer;
 	
-	@Test
+	@Test(groups ="Sanity")
 	public void logOutOfAccount() throws IOException, InterruptedException {
 		
 		drawer = new DrawerOption(driver);

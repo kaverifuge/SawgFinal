@@ -32,7 +32,7 @@ public WebDriver driver;
 	 public OnlyBackPackDisplayPage obackpack;
 	 public Logger logger;
 	
-	@BeforeClass
+	@BeforeClass(groups ={"Sanity","Verification","Functionality"})
 	public void setUp() throws IOException {
 		
 		// Set up Chrome options to disable password manager
@@ -70,7 +70,7 @@ public WebDriver driver;
 		logger.info("Login data entered");
 		lp.clickLoginButton();
 		logger.info("Login button clicked");
-		System.out.println("Login Success");
+		//System.out.println("Login Success");
 		logger.info("LOGIN SUCCESS");
 		
 		
@@ -89,10 +89,10 @@ public WebDriver driver;
 	  obackpack = new OnlyBackPackDisplayPage(driver);
 	   obackpack.clickBackpackAddbtn();
 	   Thread.sleep(30);
-	   System.out.println("Addition of item success");
+	   //System.out.println("Addition of item success");
 	}
 	
-	@AfterClass
+	@AfterClass(groups ={"Sanity","Verification","Functionality"})
 	public void tearDown() throws InterruptedException {
 		
 		//Thread.sleep(30);

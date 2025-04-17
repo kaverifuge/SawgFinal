@@ -23,7 +23,7 @@ public class TC004_VerifyCompletePurchaseSuccess extends BaseTest {
 	public CheckoutOverviewPage chkOverview;
 	public CheckoutCompletePage chckComplete;
 	
-	@Test
+	@Test(groups ={"Functionality","Sanity"})
 	public void purchaseCompleteSucess() throws IOException, InterruptedException  {
 		
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));

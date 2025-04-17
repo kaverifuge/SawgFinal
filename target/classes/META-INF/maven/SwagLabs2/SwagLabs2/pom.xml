@@ -3,6 +3,7 @@
   <groupId>SwagLabs2</groupId>
   <artifactId>SwagLabs2</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <dependencies>
 	 <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
 	<dependency>

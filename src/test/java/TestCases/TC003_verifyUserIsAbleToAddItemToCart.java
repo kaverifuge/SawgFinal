@@ -12,7 +12,7 @@ import Pages.OnlyBackPackDisplayPage;
 public class TC003_verifyUserIsAbleToAddItemToCart extends BaseTest{
 	 
 	 
-	@Test
+	@Test(groups = "Verification")
 	public void verifyAdditionOfItemsSuccess() throws IOException, InterruptedException {
 		
 		loginToAccount();

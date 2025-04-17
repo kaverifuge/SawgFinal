@@ -14,7 +14,7 @@ public class TC005_RemoveItem extends BaseTest{
 	
 	public OnlyBackPackDisplayPage obackpack;
 	
-	@Test
+	@Test(groups ="Functionality")
 	public void removeItem() throws IOException, InterruptedException {
 	
 	loginToAccount();
