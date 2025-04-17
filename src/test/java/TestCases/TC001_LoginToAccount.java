@@ -14,6 +14,7 @@ public class TC001_LoginToAccount extends BaseTest{
 	public void loginToAccountAssertion() throws IOException, InterruptedException {
 		
 		loginToAccount();
+		logger.info("Logged in to account");
 		String loggedInUrl = "https://www.saucedemo.com/inventory.html";
 		String url= driver.getCurrentUrl();
 		
