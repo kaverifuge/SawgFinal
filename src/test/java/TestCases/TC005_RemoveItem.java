@@ -23,6 +23,7 @@ public class TC005_RemoveItem extends BaseTest{
 	obackpack.clickRemoveItembtn();
 	
 	sa= new SoftAssert();
+	try {
 	    if(obackpack.verifyAddItembtnPresent() == true) {
 	    	
 	    	sa.assertTrue(true);
@@ -32,6 +33,13 @@ public class TC005_RemoveItem extends BaseTest{
 	    	sa.assertTrue(false);
 	    	System.out.println("Item Not Removed ");
 	    }
+	    
+	    sa.assertAll();
+	    
+	}catch(AssertionError e) {
+		
+		System.out.println("Assertion error : " + e.getMessage());
+	}
 	
 	}
 

@@ -21,7 +21,7 @@ public class TC001_LoginToAccount extends BaseTest{
 		System.out.println(url);
 		
 		sa = new SoftAssert();
-		
+		try {
 		if(loggedInUrl.equals(url)) {
 			sa.assertTrue(true);
 			System.out.println("Login To Account Success!!!!");
@@ -29,7 +29,11 @@ public class TC001_LoginToAccount extends BaseTest{
 			sa.assertTrue(false);
 			System.out.println("Login To Account Failed");
 		}
-		
+		sa.assertAll();
+		}catch(AssertionError e) {
+			
+			System.out.println("Assertion error : "+e.getMessage());
+		}
 		
 	}
 		

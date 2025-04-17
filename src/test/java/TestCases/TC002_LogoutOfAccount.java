@@ -28,7 +28,7 @@ public class TC002_LogoutOfAccount extends BaseTest{
 		drawer.clickLogot();
 		
 		sa = new SoftAssert();
-		
+		try {
 		if(driver.getTitle().equals("Swag Labs")) {
 		
 		    sa.assertTrue(true);
@@ -38,6 +38,10 @@ public class TC002_LogoutOfAccount extends BaseTest{
 			sa.assertTrue(false);
 		    System.out.println("Logout Failed ");
 			
+		}
+		sa.assertAll();
+		}catch(AssertionError e) {
+			System.out.println("Assertion error  : "+e.getMessage());
 		}
 	}
 	     

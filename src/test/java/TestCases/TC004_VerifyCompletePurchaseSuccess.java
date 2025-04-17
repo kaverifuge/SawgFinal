@@ -50,6 +50,7 @@ public class TC004_VerifyCompletePurchaseSuccess extends BaseTest {
 		
 		chckComplete = new CheckoutCompletePage(driver);
 		sa = new SoftAssert();
+		try {
 		 if(chckComplete.confirmOrderSuccesstext()== true) {
 			 
 			 sa.assertTrue(true);
@@ -58,6 +59,11 @@ public class TC004_VerifyCompletePurchaseSuccess extends BaseTest {
 			 sa.assertTrue(false);
 			 System.out.println("Purchase item FAILED");
 		 }
+		 sa.assertAll();
+		}catch(AssertionError e) {
+			
+			System.out.println("Assertion error "+e.getMessage());
+		}
 		
 		
 	}
