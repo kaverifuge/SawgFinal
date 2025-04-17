@@ -1,7 +1,10 @@
 package TestCases;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -26,9 +29,19 @@ public class TC005_RemoveItem extends BaseTest{
 	try {
 	    if(obackpack.verifyAddItembtnPresent() == true) {
 	    	
+	    	TakesScreenshot screen1 = (TakesScreenshot)driver;
+	    	File source1 = screen1.getScreenshotAs(OutputType.FILE);
+	    	File target1 = new File(System.getProperty("user.dir")+"//screenshots//fullpage1.png");
+	    	source1.renameTo(target1);
+	    	
 	    	sa.assertTrue(true);
 	    	System.out.println("Item Removed !!!!");
 	    }else {
+	    	
+	    	TakesScreenshot screen2 = (TakesScreenshot)driver;
+	    	File source2 = screen2.getScreenshotAs(OutputType.FILE);
+	    	File target2 = new File(System.getProperty("user.dir")+"//screenshots//removebtn.png");
+	    	source2.renameTo(target2);
 	    	
 	    	sa.assertTrue(false);
 	    	System.out.println("Item Not Removed ");

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="AllTestCases">
+  <test thread-count="5" name="Test">
+    <classes>
+      <class name="TestCases.TC006_VerifyAppTitle"/>
+      <class name="TestCases.BaseTest"/>
+      <class name="TestCases.TC004_VerifyCompletePurchaseSuccess"/>
+      <class name="TestCases.TC002_LogoutOfAccount"/>
+      <class name="TestCases.TC001_LoginToAccount"/>
+      <class name="TestCases.TC003_verifyUserIsAbleToAddItemToCart"/>
+      <class name="TestCases.TC005_RemoveItem"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- AllTestCases -->

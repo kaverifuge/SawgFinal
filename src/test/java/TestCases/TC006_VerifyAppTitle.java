@@ -1,5 +1,9 @@
 package TestCases;
 
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
@@ -18,11 +22,14 @@ public class TC006_VerifyAppTitle extends BaseTest{
 			System.out.println("Title matched");
 			
 		}else {
-			
-			
+		
+				TakesScreenshot screen = (TakesScreenshot)driver;
+				File source = screen.getScreenshotAs(OutputType.FILE );
+				File target = new File(System.getProperty("user.dir")+"//screenshots//fullpage.png");
+				source.renameTo(target);
+				
 				sa.assertTrue(false);
 				System.out.println("Title NOT matched");
-
 		}
 		    sa.assertAll();
 		}catch(AssertionError e){
